@@ -21,6 +21,11 @@ public class blogController {
         return "pagenotfound";
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/")
+    public String redirectToBlogs() {
+        return "redirect:/blogs";
+    }
+
     // Controller Mapping to list down all blog posts;
     @RequestMapping(method = RequestMethod.GET , value = "/blogs")
     public ModelAndView getAllBlogs()
